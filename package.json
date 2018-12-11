@@ -1,0 +1,18 @@
+{
+  "name": "serverless-next",
+  "version": "0.1.0",
+  "description": "Serverless Next is an example repository of a serverless implementation of server-side rendering for a React application",
+  "main": "index.js",
+  "author": "Steven Childress",
+  "scripts": {
+    "dev": "next-serverless",
+    "build": "next-serverless build",
+    "start": "next-serverless start"
+  },
+  "dependencies": {
+    "next": "^7.0.2",
+    "next-serverless": "^1.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
