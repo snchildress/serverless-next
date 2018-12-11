@@ -5,9 +5,9 @@
   "main": "index.js",
   "author": "Steven Childress",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "next-serverless",
+    "build": "next-serverless build",
+    "start": "next-serverless start"
   },
   "dependencies": {
     "next": "^7.0.2",
