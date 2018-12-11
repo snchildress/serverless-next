@@ -8,6 +8,6 @@ provider:
 
 functions:
   app:
-    handler: index.handler
+    handler: node_modules/next-serverless/lib/server.handler
     events:
       - http: ANY /
