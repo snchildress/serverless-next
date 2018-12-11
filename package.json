@@ -1,6 +1,6 @@
 {
   "name": "serverless-next",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Serverless Next is an example repository of a serverless implementation of server-side rendering for a React application",
   "main": "index.js",
   "author": "Steven Childress",
