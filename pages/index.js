@@ -1,10 +1,12 @@
+import 'lucidium/styles/lucidium.css'
+
+import Avatar from 'lucidium/Avatar'
 import Link from 'next-serverless/link'
 
 export default () => (
   <div>
     <Link href="/about">
-      <a>About Page</a>
+      <Avatar name="About" style={{ cursor: 'pointer' }} />
     </Link>
-    <p>Hello Next.js</p>
   </div>
 )

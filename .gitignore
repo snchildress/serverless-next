@@ -4,3 +4,6 @@
 # builds
 /.next
 /.serverless
+
+# sensitive information
+.npmrc
