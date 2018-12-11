@@ -3,5 +3,10 @@
   "version": "0.1.0",
   "description": "Serverless Next is an example repository of a serverless implementation of server-side rendering for a React application",
   "main": "index.js",
-  "author": "Steven Childress"
+  "author": "Steven Childress",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
 }
