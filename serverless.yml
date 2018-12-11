@@ -11,3 +11,5 @@ functions:
     handler: node_modules/next-serverless/lib/server.handler
     events:
       - http: ANY /
+    environment:
+      NODE_ENV: production
