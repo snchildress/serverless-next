@@ -10,7 +10,7 @@ functions:
   app:
     handler: node_modules/next-serverless/lib/server.handler
     events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http: GET /
+      - http: 'GET {proxy+}'
     environment:
       NODE_ENV: production
