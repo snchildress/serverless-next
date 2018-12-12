@@ -1,17 +1,29 @@
 import 'lucidium/styles/lucidium.css'
 
 import Layout from '../components/Layout'
-import PostLink from '../components/PostLink'
 import Heading from 'lucidium/Heading'
-import Card from 'lucidium/Card'
+import Link from 'next-serverless/link'
+import fetch from 'isomorphic-unfetch'
 
-export default () => (
+const Index = (props) => (
   <Layout>
-    <Heading size={900}>My Blog</Heading>
-    <Card style={{ width: '300px' }}>
-      <PostLink title="Hello Next.js" />
-      <PostLink title="Learn Next.js" />
-      <PostLink title="Deploy apps with Zeit" />
-    </Card>
+    <Heading size={900}>Batman TV Shows</Heading>
+    <ul>
+      {props.shows.map(({show}) => (
+        <li key={show.id}>
+          <Link href={`/post/${show.id}`}>
+            <a>{show.name}</a>
+          </Link>
+        </li>
+      ))}
+    </ul>
   </Layout>
 )
+
+Index.getInitialProps = async function() {
+  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+  const data = await res.json()
+  return { shows: data }
+}
+
+export default Index
