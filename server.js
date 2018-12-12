@@ -6,7 +6,12 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 const createServer = () => {
-  const server = express()
+  const server = express()  
+  server.get('/post/:title', (req, res) => {
+    const actualPage = '/post'
+    const queryParams = { title: req.params.title } 
+    app.render(req, res, actualPage, queryParams)
+  })
   server.get("*", (req, res) => handle(req, res))
   return server
 };
