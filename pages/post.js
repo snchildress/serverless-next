@@ -4,7 +4,7 @@ import Card from 'lucidium/Card'
 
 import fetch from 'isomorphic-unfetch'
 
-const Post =  (props) => (
+const Post = (props) => (
   <Layout>
     <Card>
       <Heading>{props.show.name}</Heading>
