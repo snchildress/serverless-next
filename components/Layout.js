@@ -1,3 +1,5 @@
+import 'lucidium/styles/lucidium.css'
+
 import Header from './Header'
 
 const layoutStyle = {

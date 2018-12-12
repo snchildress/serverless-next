@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import Heading from 'lucidium/Heading'
 import Card from 'lucidium/Card'
+
 import fetch from 'isomorphic-unfetch'
 
 const Post =  (props) => (

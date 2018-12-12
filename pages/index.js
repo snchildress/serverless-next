@@ -1,8 +1,7 @@
-import 'lucidium/styles/lucidium.css'
-
 import Layout from '../components/Layout'
 import Heading from 'lucidium/Heading'
 import Link from 'next-serverless/link'
+
 import fetch from 'isomorphic-unfetch'
 
 const Index = (props) => (
