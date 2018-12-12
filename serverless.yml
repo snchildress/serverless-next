@@ -9,7 +9,7 @@ provider:
     NODE_ENV: production
 
 custom:
-  handler: server.handler
+  handler: lambda.handler
 
 functions:
   home:
