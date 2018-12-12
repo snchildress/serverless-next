@@ -9,7 +9,7 @@ provider:
     NODE_ENV: production
 
 custom:
-  handler: node_modules/next-serverless/lib/server.handler
+  handler: server.handler
 
 functions:
   home:
