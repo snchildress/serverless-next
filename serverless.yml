@@ -11,13 +11,11 @@ functions:
     handler: node_modules/next-serverless/lib/server.handler
     events:
       - http: GET /
-      - http: 'GET {proxy+}'
     environment:
       NODE_ENV: production
   about:
     handler: node_modules/next-serverless/lib/server.handler
     events:
       - http: GET /about
-      - http: 'GET /about/{proxy+}'
     environment:
       NODE_ENV: production
