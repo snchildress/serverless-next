@@ -26,4 +26,4 @@ functions:
   post:
     handler: ${self:custom.handler}
     events:
-      - http: GET /post
+      - http: GET /post/{proxy+}
