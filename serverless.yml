@@ -7,10 +7,15 @@ provider:
   region: us-east-1
 
 functions:
-  app:
+  home:
     handler: node_modules/next-serverless/lib/server.handler
     events:
-      - http: ANY /
-      - http: 'ANY {proxy+}'
+      - http: GET /
+    environment:
+      NODE_ENV: production
+  about:
+    handler: node_modules/next-serverless/lib/server.handler
+    events:
+      - http: GET /about
     environment:
       NODE_ENV: production
