@@ -1,12 +1,17 @@
 import 'lucidium/styles/lucidium.css'
 
-import Avatar from 'lucidium/Avatar'
-import Link from 'next-serverless/link'
+import Layout from '../components/Layout'
+import PostLink from '../components/PostLink'
+import Heading from 'lucidium/Heading'
+import Card from 'lucidium/Card'
 
 export default () => (
-  <div>
-    <Link href="/about">
-      <Avatar name="About" style={{ cursor: 'pointer' }} />
-    </Link>
-  </div>
+  <Layout>
+    <Heading size={900}>My Blog</Heading>
+    <Card style={{ width: '300px' }}>
+      <PostLink title="Hello Next.js" />
+      <PostLink title="Learn Next.js" />
+      <PostLink title="Deploy apps with Zeit" />
+    </Card>
+  </Layout>
 )
