@@ -1,5 +1,5 @@
 import Banner from 'lucidium/Banner'
-import Link from 'next-serverless/link'
+import Link from 'next/link'
 
 const linkStyle = {
   marginRight: 15
