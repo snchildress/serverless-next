@@ -19,3 +19,9 @@ functions:
       - http: GET /about
     environment:
       NODE_ENV: production
+  post:
+    handler: node_modules/next-serverless/lib/server.handler
+    events:
+      - http: GET /page
+    environment:
+      NODE_ENV: production
