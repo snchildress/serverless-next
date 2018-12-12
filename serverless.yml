@@ -3,21 +3,24 @@ service: serverless-next
 provider:
   name: aws
   runtime: nodejs8.10
-  stage: dev
+  stage: prod
   region: us-east-1
   environment:
     NODE_ENV: production
 
+custom:
+  handler: node_modules/next-serverless/lib/server.handler
+
 functions:
   home:
-    handler: node_modules/next-serverless/lib/server.handler
+    handler: ${self:custom.handler}
     events:
       - http: GET /
   about:
-    handler: node_modules/next-serverless/lib/server.handler
+    handler: ${self:custom.handler}
     events:
       - http: GET /about
   post:
-    handler: node_modules/next-serverless/lib/server.handler
+    handler: ${self:custom.handler}
     events:
       - http: GET /page
