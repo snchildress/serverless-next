@@ -8,4 +8,4 @@ Clone this repository locally, install all dependencies with `npm i`, and run yo
 
 ## Deploying
 
-Build a production environment with `npm run build` and deploy using the serverless framework with `serverless deploy`
+Build and deploy a production environment with `npm run deploy`

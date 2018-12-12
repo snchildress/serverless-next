@@ -5,17 +5,24 @@
   "main": "index.js",
   "author": "Steven Childress",
   "scripts": {
-    "dev": "next-serverless",
-    "build": "next-serverless build",
-    "start": "next-serverless start"
+    "dev": "node server.js",
+    "offline": "serverless offline start",
+    "build": "next build",
+    "start": "npm run build && NODE_ENV=production node server.js",
+    "deploy": "npm run build && serverless deploy"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "aws-serverless-express": "^3.3.5",
+    "express": "^4.16.4",
     "lucidium": "^5.6.0",
     "next": "^7.0.2",
     "next-serverless": "^1.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-icons": "^2.0.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.31.3"
   }
 }
